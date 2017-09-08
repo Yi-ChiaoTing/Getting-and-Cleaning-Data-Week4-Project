@@ -31,8 +31,7 @@ names(dataSubject) <- c("subject")
 
 =============================================================================================================================
 
-# Step 3: extracts only the measurements on the mean and standard deviation for each measurement and 
-# then subsets the data by appointed variables
+# Step 3: extracts only the measurements on the mean and standard deviation for each measurement and then subsets the data by appointed variables
 
 subdataFeaturesNames <- dataFeaturesNames$V2[grep("mean\\(\\)|std\\(\\)",dataFeaturesNames$V2)]
 selectedNames <- c(as.character(subdataFeaturesNames),"subject","activity")
@@ -41,12 +40,12 @@ fullData <- subset(fullData,select=selectedNames)
 =============================================================================================================================
 
 # Step 4: labels the data set with descriptive variable names
-  - prefix t  is replaced by  time
-  - Acc is replaced by Accelerometer
-  - Gyro is replaced by Gyroscope
-  - prefix f is replaced by frequency
-  - Mag is replaced by Magnitude
-  - BodyBody is replaced by Body
+  - ^t is relabeled by time
+  - ^f is relabeled by frequency
+  - Acc is relabeled by Accelerometer
+  - Gyro is relabeled by Gyroscope
+  - Mag is relabeled by Magnitude
+  - BodyBody is relabeled by Body
 
 activityLabels <- read.table(file.path(path,"activity_labels.txt"),header = FALSE)
 fullData$activity <- factor(fullData$activity,labels=as.character(activityLabels$V2))
