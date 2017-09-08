@@ -76,5 +76,6 @@ These signals were used to estimate variables of the feature vector for each pat
   66. frequencyBodyGyroscopeJerkMagnitude-std( )     
   67. subject                                       
   68. activity
+  
   in which mean(): Mean value / std(): Standard deviation
 
