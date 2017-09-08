@@ -31,7 +31,8 @@ names(dataSubject) <- c("subject")
 
 =============================================================================================================================
 
-# Step 3: extracts only the measurements on the mean and standard deviation for each measurement and then subsets the data by appointed variables
+# Step 3: extracts only the measurements on the mean and standard deviation for each measurement 
+# and then subsets the data by appointed variables
 
 subdataFeaturesNames <- dataFeaturesNames$V2[grep("mean\\(\\)|std\\(\\)",dataFeaturesNames$V2)]
 selectedNames <- c(as.character(subdataFeaturesNames),"subject","activity")
