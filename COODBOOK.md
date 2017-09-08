@@ -77,5 +77,15 @@ These signals were used to estimate variables of the feature vector for each pat
   67. subject                                       
   68. activity
   
-  in which mean(): Mean value / std(): Standard deviation
+  in which 
+  mean(): Mean value
+  std(): Standard deviation
+  
+  and the meaning of code...
+  1. Walking 
+  2. Walking_Upstairs 
+  3. Walking_Downstairs 
+  4. Sitting 
+  5. Standing 
+  6. Laying
 
